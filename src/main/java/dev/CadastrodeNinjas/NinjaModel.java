@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 //Entity transforma uma classe em entidade no DB
 @Entity
-//
+//nome da table é cadastro
 @Table(name ="tb_cadastro")
 public class NinjaModel {
 
