@@ -1,4 +1,4 @@
-package dev.CadastrodeNinjas;
+package dev.CadastrodeSoldados.Soldados;
 
 import jakarta.persistence.*;
 
@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Entity
 //
 @Table(name ="tb_cadastro")
-public class NinjaModel {
+public class SoldadoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,11 +15,11 @@ public class NinjaModel {
     String email;
     Integer idade;
 
-    public NinjaModel(){
+    public SoldadoModel(){
 
     }
 
-    public NinjaModel(String nome, String email, Integer idade) {
+    public SoldadoModel(String nome, String email, Integer idade) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
