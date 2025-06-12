@@ -1,14 +1,12 @@
-package dev.CadastrodeSoldados.Soldados;
+package dev.CadastrodeNinjas;
 
 import jakarta.persistence.*;
-
-import java.util.List;
 
 //Entity transforma uma classe em entidade no DB
 @Entity
 //
 @Table(name ="tb_cadastro")
-public class SoldadoModel {
+public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,13 +14,12 @@ public class SoldadoModel {
     String nome;
     String email;
     Integer idade;
-    private List<MissoesModel> missoes;
 
-    public SoldadoModel(){
+    public NinjaModel(){
 
     }
 
-    public SoldadoModel(String nome, String email, Integer idade) {
+    public NinjaModel(String nome, String email, Integer idade) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
