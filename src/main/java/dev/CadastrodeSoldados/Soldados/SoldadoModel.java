@@ -19,6 +19,8 @@ public class SoldadoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String nome;
+
+    @Column( unique = true)
     String email;
     Integer idade;
 
