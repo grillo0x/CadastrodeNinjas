@@ -1,4 +1,4 @@
 package dev.CadastrodeSoldados.Soldados;
 
-public class SoldadoRepository {
+public interface SoldadoRepository {
 }
