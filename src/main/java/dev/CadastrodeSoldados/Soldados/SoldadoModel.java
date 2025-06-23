@@ -26,7 +26,7 @@ public class SoldadoModel {
 
     //Um Soldado só poderá realizar uma única missão
     @ManyToOne
-    @JoinColumn(name = "missoes_id") //Foreign Key
+    @JoinColumn(name = "id_missoes") //Foreign Key
     private MissoesModel missoes;
 
 
