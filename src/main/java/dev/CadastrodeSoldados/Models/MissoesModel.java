@@ -1,6 +1,6 @@
-package dev.CadastrodeSoldados.Missoes;
+package dev.CadastrodeSoldados.Models;
 
-import dev.CadastrodeSoldados.Soldados.SoldadoModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,6 +25,7 @@ public class MissoesModel {
 
     // Uma missão pode ter vários soldados
     @OneToMany(mappedBy = "missoes")
+    @JsonIgnore
     private List<SoldadoModel> soldados;
 
 }

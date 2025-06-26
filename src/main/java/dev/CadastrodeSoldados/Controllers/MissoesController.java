@@ -1,4 +1,4 @@
-package dev.CadastrodeSoldados.Missoes;
+package dev.CadastrodeSoldados.Controllers;
 
 import org.springframework.web.bind.annotation.*;
 

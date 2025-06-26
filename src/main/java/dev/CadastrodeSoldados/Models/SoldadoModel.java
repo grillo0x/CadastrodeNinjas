@@ -1,6 +1,5 @@
-package dev.CadastrodeSoldados.Soldados;
+package dev.CadastrodeSoldados.Models;
 
-import dev.CadastrodeSoldados.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

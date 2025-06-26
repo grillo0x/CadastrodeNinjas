@@ -1,12 +1,23 @@
-package dev.CadastrodeSoldados.Soldados;
+package dev.CadastrodeSoldados.Controllers;
 
+import dev.CadastrodeSoldados.Models.SoldadoModel;
+import dev.CadastrodeSoldados.Repositories.SoldadoRepository;
+import dev.CadastrodeSoldados.Services.SoldadoService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping
 public class SoldadoController {
 
-//Adicionar soldado
+    private SoldadoService soldadoService;
+
+    public SoldadoController(SoldadoService soldadoService) {
+        this.soldadoService = soldadoService;
+    }
+
+    //Adicionar soldado
 @PostMapping("/criar")
     public String criarSoldado(){
     return "Soldado criado!";
@@ -14,13 +25,13 @@ public class SoldadoController {
 
 //Procurar todos os soldado
 @GetMapping("/todos")
-    public String todosSoldados(){
-    return "Todos os soldados!";
+    public List<SoldadoModel> listarSoldados(){
+    return soldadoService.listarSoldados();
 }
 //Mostrar  os soldados por ID
 @GetMapping("/todosID")
 public String todosSoldadosID(){
-    return "Todos os soldados por ID!";
+    return "";
 }
 // Alterar dados do soldado por id
 @PutMapping("/alterarsoldado")
